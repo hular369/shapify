@@ -63,13 +63,13 @@ For circles:
 $shape = new ShapeFactory();
 
 // Create a circle shape with center coordinates and radius
-$drawShape = $shape::create('circle', null, 27.710258, 85.279664, 10);
+$drawShape = $shape::create('circle', null, 27.710258, 85.279664, 10); // radius=10 in km
 
 // Check if a point is inside the circle
 $isInside = $drawShape->contains(27.710258, 85.279664);
 
 // Calculate the area of the circle
-$area = $drawShape->area();
+$area = $drawShape->area(); // area in sq. km
 
 // Output the results
 echo "Is inside: " . ($isInside ? "Yes" : "No") . PHP_EOL;

@@ -19,10 +19,10 @@ $imgnr = [[21.298245840490015, -16.787743941576906],[16.607152843435603, -16.262
 
 $shape = new ShapeFactory();
 $drawShape = $shape::create('polygon', $imgnr);
-$isInside  = $drawShape->contains(27.701853, 85.319418); // Output: true
-$sides = $drawShape->sides(); // Output: 5
-$nearestVertex = $drawShape->nearestVertex(27.684822, 85.339958); // Output: [27.678999, 85.349976]
-$area = $drawShape->area(); // Output: 0.000177
+$isInside  = $drawShape->contains(27.701853, 85.319418); 
+$sides = $drawShape->sides(); 
+$nearestVertex = $drawShape->nearestVertex(27.684822, 85.339958); 
+$area = $drawShape->area(); // in sq. km
 
 echo $isInside;
 echo PHP_EOL;
@@ -34,11 +34,11 @@ echo $area;
 echo PHP_EOL;
 
 $shape = new ShapeFactory();
-$drawShape = $shape::create('circle', null, 27.710258, 85.279664, 10);
-$isInside  = $drawShape->contains(27.710258, 85.279664); // Output: true
-$sides = $drawShape->sides(); // Output: 1
-$nearestVertex = $drawShape->nearestVertex(27.710258, 85.279664); // Output: [27.710258, 85.279664]
-$area = $drawShape->area(); // Output: 31415.926535897932
+$drawShape = $shape::create('circle', null, 27.710258, 85.279664, 10); // 10 km radius
+$isInside  = $drawShape->contains(27.710258, 85.279664); 
+$sides = $drawShape->sides(); 
+$nearestVertex = $drawShape->nearestVertex(27.710258, 85.279664); 
+$area = $drawShape->area(); // in sq. km
 
 echo $isInside;
 echo PHP_EOL;
