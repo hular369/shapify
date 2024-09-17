@@ -18,7 +18,7 @@ $mrtn = [[21.298245840490015, -16.787743941576906],[16.607152843435603, -16.2623
 $imgnr = [[21.298245840490015, -16.787743941576906],[16.607152843435603, -16.26238727877592]];
 
 $shape = new ShapeFactory();
-$drawShape = $shape::create('irregular', $imgnr);
+$drawShape = $shape::create('polygon', $imgnr);
 $isInside  = $drawShape->contains(27.701853, 85.319418); // Output: true
 $sides = $drawShape->sides(); // Output: 5
 $nearestVertex = $drawShape->nearestVertex(27.684822, 85.339958); // Output: [27.678999, 85.349976]

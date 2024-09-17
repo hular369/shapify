@@ -11,7 +11,7 @@ class ShapeFactory {
         switch ($type) {
             case 'circle':
                 return new Circle($centerLat, $centerLong, $radius);
-            case 'irregular':
+            case 'polygon':
                 return new Irregular($polygonPoints);
             default:
                 throw new \Exception('Invalid shape type');
