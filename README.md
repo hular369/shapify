@@ -8,10 +8,10 @@ $egpt = [[31.597741, 25.112545], [22.152357, 24.958816], [22.081148, 36.719048],
 $shape = new ShapeFactory();
 $drawShape = $shape::create('irregular', $egpt);
 $isInside  = $drawShape->contains(27.701853, 85.319418);
-$area = $drawShape->area(); // Output: 0.000177
+$area = $drawShape->area(); 
 
 For circles:
 $shape = new ShapeFactory();
 $drawShape = $shape::create('circle', null, 27.710258, 85.279664, 10);
 $isInside  = $drawShape->contains(27.710258, 85.279664);
-$area = $drawShape->area(); // Output: 31415.926535897932
+$area = $drawShape->area(); 
