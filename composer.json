@@ -1,5 +1,5 @@
 {
-    "name": "vendor/package-name",
+    "name": "vendor/shapify",
     "description": "A short description of your package",
     "type": "library",
     "require": {
