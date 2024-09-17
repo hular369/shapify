@@ -28,6 +28,15 @@ This package enables you to check if a coordinate is inside a defined boundary o
 This package enables you to check if a coordinate is inside a defined boundary of a polygon. It also facilitates with a feature to calculate area of a given boundary defined by polygon coordinates (Lat,long).
 
 
+
+## Examples
+
+### For polygons:
+The following example demonstrates how to create a polygon shape, check if a point is inside the polygon, and calculate the area of the polygon.
+
+- **Coordinates of the polygon vertices**: `[[31.597741, 25.112545], [22.152357, 24.958816], [22.081148, 36.719048], [31.269823, 31.338550]]`
+- **Point to check**: `(27.701853, 85.319418)`
+
 For polygons:
 $egpt = [[31.597741, 25.112545], [22.152357, 24.958816], [22.081148, 36.719048], [31.269823, 31.338550]];
 $shape = new ShapeFactory();
