@@ -52,7 +52,11 @@ $isInside = $drawShape->contains(27.701853, 85.319418);
 // Calculate the area of the polygon
 $area = $drawShape->area();
 
+// get nearest vertex of the polygon
+$nearestVertex = $drawShape->nearestVertex(27.701853, 85.319418)
+
 // Output the results
+echo "Nearest vertex of the polygon: " . json_encode($nearestVertex) . PHP_EOL;
 echo "Is inside: " . ($isInside ? "Yes" : "No") . PHP_EOL;
 echo "Area: " . $area . PHP_EOL;
 ?>
