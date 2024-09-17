@@ -11,9 +11,9 @@ class ComposerStaticInit9463cb49e1dde768c9c335856484d0a0
         array (
             'proj4php\\' => 9,
         ),
-        'S' => 
+        'H' => 
         array (
-            'Src\\' => 4,
+            'Hular369\\GeoShapify\\' => 20,
         ),
     );
 
@@ -22,7 +22,7 @@ class ComposerStaticInit9463cb49e1dde768c9c335856484d0a0
         array (
             0 => __DIR__ . '/..' . '/proj4php/proj4php/src',
         ),
-        'Src\\' => 
+        'Hular369\\GeoShapify\\' => 
         array (
             0 => __DIR__ . '/../..' . '/src',
         ),

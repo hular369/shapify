@@ -1,8 +1,8 @@
 <?php
-namespace Src;
+namespace Hular369\GeoShapify;
 
-use Src\Circle;
-use Src\Irregular;
+use Hular369\GeoShapify\Circle;
+use Hular369\GeoShapify\Irregular;
 
 class ShapeFactory {
 

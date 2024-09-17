@@ -1,5 +1,7 @@
 <?php
-namespace Src;
+namespace Hular369\GeoShapify;
+
+use Hular369\GeoShapify\Shape;
 class Circle implements Shape {
     private $centerLat;
     private $centerLong;

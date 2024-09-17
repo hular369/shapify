@@ -1,8 +1,8 @@
 <?php
 
-namespace Src;
+namespace Hular369\GeoShapify;
 
-use Src\Shape;
+use Hular369\GeoShapify\Shape;
 
 class Irregular implements Shape
 {

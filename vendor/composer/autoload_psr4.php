@@ -7,5 +7,5 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'proj4php\\' => array($vendorDir . '/proj4php/proj4php/src'),
-    'Src\\' => array($baseDir . '/src'),
+    'Hular369\\GeoShapify\\' => array($baseDir . '/src'),
 );

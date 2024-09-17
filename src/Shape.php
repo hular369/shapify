@@ -1,5 +1,5 @@
 <?php
-namespace Src;
+namespace Hular369\GeoShapify;
 
 interface Shape {
 
