@@ -1,5 +1,5 @@
 {
-    "name": "vendor/geo-shapify",
+    "name": "hular369/geo-shapify",
     "description": "A short description of your package",
     "type": "library",
     "require": {
