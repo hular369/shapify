@@ -2,6 +2,7 @@
     "name": "hular369/geo-shapify",
     "description": "A PHP library that allows to check if a coordinate(lat,long) is inside or outside of a circle or a polygon",
     "type": "library",
+    "license": "MIT",
     "require": {
         "php": ">=7.0"
     },
