@@ -28,24 +28,50 @@ This package enables you to check if a coordinate is inside a defined boundary o
 This package enables you to check if a coordinate is inside a defined boundary of a polygon. It also facilitates with a feature to calculate area of a given boundary defined by polygon coordinates (Lat,long).
 
 
+To create and work with polygons, you can use the `ShapeFactory` class as follows:
 
-## Examples
+```php
+<?php
+// Define the coordinates of the polygon vertices
+$egpt = [
+    [31.597741, 25.112545], 
+    [22.152357, 24.958816], 
+    [22.081148, 36.719048], 
+    [31.269823, 31.338550]
+];
 
-### For polygons:
-The following example demonstrates how to create a polygon shape, check if a point is inside the polygon, and calculate the area of the polygon.
-
-- **Coordinates of the polygon vertices**: `[[31.597741, 25.112545], [22.152357, 24.958816], [22.081148, 36.719048], [31.269823, 31.338550]]`
-- **Point to check**: `(27.701853, 85.319418)`
-
-For polygons:
-$egpt = [[31.597741, 25.112545], [22.152357, 24.958816], [22.081148, 36.719048], [31.269823, 31.338550]];
+// Create a ShapeFactory instance
 $shape = new ShapeFactory();
+
+// Create a polygon shape
 $drawShape = $shape::create('polygon', $egpt);
-$isInside  = $drawShape->contains(27.701853, 85.319418);
-$area = $drawShape->area(); 
+
+// Check if a point is inside the polygon
+$isInside = $drawShape->contains(27.701853, 85.319418);
+
+// Calculate the area of the polygon
+$area = $drawShape->area();
+
+// Output the results
+echo "Is inside: " . ($isInside ? "Yes" : "No") . PHP_EOL;
+echo "Area: " . $area . PHP_EOL;
+?>
 
 For circles:
+<?php
+// Create a ShapeFactory instance
 $shape = new ShapeFactory();
+
+// Create a circle shape with center coordinates and radius
 $drawShape = $shape::create('circle', null, 27.710258, 85.279664, 10);
-$isInside  = $drawShape->contains(27.710258, 85.279664);
-$area = $drawShape->area(); 
+
+// Check if a point is inside the circle
+$isInside = $drawShape->contains(27.710258, 85.279664);
+
+// Calculate the area of the circle
+$area = $drawShape->area();
+
+// Output the results
+echo "Is inside: " . ($isInside ? "Yes" : "No") . PHP_EOL;
+echo "Area: " . $area . PHP_EOL;
+?>; 
