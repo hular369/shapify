@@ -29,7 +29,7 @@ class ShapeFactory
     public static function create($type, $polygonPoints = [], $centerLat = null, $centerLong = null, $radius = null)
     {
 
-        $availableCountries = ['norway', 'sweden', 'denmark', 'germany', 'lithuania', 'nepal'];
+        $availableCountries = ['norway', 'sweden', 'finland', 'denmark', 'germany', 'lithuania', 'nepal'];
 
         switch ($type) {
             case 'circle':
