@@ -40,11 +40,9 @@ $egpt = [
     [31.269823, 31.338550]
 ];
 
-// Create a ShapeFactory instance
-$shape = new ShapeFactory();
 
 // Create a polygon shape
-$drawShape = $shape::create('polygon', $egpt);
+$drawShape = ShapeFactory::create('polygon', $egpt);
 
 // Check if a point is inside the polygon
 $isInside = $drawShape->contains(27.701853, 85.319418);
