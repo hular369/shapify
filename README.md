@@ -37,7 +37,7 @@ This package enables you to check if a coordinate is inside a defined boundary o
 To work features on countries, you can implement as follows:
 
 ```php
-Note: currently the feature is available only for 'norway', 'sweden', 'denmark', 'germany', 'lithuania', 'nepal'.
+Note: currently the feature is available only for 'norway', 'sweden', 'finland', 'denmark', 'germany', 'lithuania', 'nepal'.
 
 <?php
 
