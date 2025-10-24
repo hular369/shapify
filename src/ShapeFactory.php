@@ -1,4 +1,5 @@
 <?php
+
 namespace Hular369\GeoShapify;
 
 use Hular369\GeoShapify\Circle;
@@ -11,7 +12,8 @@ use Hular369\GeoShapify\Irregular;
  *
  * @package Hular369\GeoShapify
  */
-class ShapeFactory {
+class ShapeFactory
+{
 
     /**
      * Create a shape instance based on the type.
@@ -24,16 +26,20 @@ class ShapeFactory {
      * @return Circle|Irregular The created shape instance.
      * @throws \Exception If an invalid shape type is provided.
      */
-    public static function create($type, $polygonPoints, $centerLat = null, $centerLong = null, $radius = null) {
+    public static function create($type, $polygonPoints = [], $centerLat = null, $centerLong = null, $radius = null)
+    {
+
+        $availableCountries = ['norway', 'sweden', 'denmark', 'germany', 'lithuania', 'nepal'];
 
         switch ($type) {
             case 'circle':
                 return new Circle($centerLat, $centerLong, $radius);
             case 'polygon':
                 return new Irregular($polygonPoints);
+            case in_array($type, $availableCountries):
+                return new Country($type);
             default:
-                throw new \Exception('Invalid shape type');
+                throw new \Exception('Invalid type: ' . $type);
         }
-        
     }
 }

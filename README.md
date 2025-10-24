@@ -6,6 +6,11 @@ This package enables you to check if a coordinate is inside a defined boundary o
 ## Features
 
 - **Polygon Boundaries**: 
+  - Check if a coordinate is inside a country.
+  - Determine which boundary coordinate is nearest to a given point(lat, long),
+  - Calculate the area of a country.
+
+- **Polygon Boundaries**: 
   - Check if a coordinate is inside a polygon.
   - Calculate the area of a polygon.
 
@@ -15,7 +20,7 @@ This package enables you to check if a coordinate is inside a defined boundary o
 
 ## Usage
 
-### For Polygons:
+### For Countries and Polygons:
 1. Define the polygon coordinates.
 2. Create a polygon shape using `ShapeFactory`.
 3. Check if a coordinate is inside the polygon using `contains`.
@@ -25,7 +30,30 @@ This package enables you to check if a coordinate is inside a defined boundary o
 1. Create a circle shape using `ShapeFactory` with center coordinates and radius.
 2. Check if a coordinate is inside the circle using `contains`.
 3. Calculate the area of the circle using `area`.
+
 This package enables you to check if a coordinate is inside a defined boundary of a polygon. It also facilitates with a feature to calculate area of a given boundary defined by polygon coordinates (Lat,long).
+
+
+To work features on countries, you can implement as follows:
+
+```php
+Note: currently the feature is available only for 'norway', 'sweden', 'denmark', 'germany', 'lithuania', 'nepal'.
+
+<?php
+
+// Create a polygon shape
+$drawCountry = ShapeFactory::create('sweden');
+
+// Check if a point is inside the polygon
+$isInside = $drawCountry->contains(56.701853, 12.319418);
+
+// Calculate the area of the polygon
+$area = $drawCountry->area();
+
+// get nearest vertex of the polygon
+$nearestVertex = $drawCountry->nearestVertex(57.322011, 11.229478)
+
+```
 
 
 To create and work with polygons, you can use the `ShapeFactory` class as follows:

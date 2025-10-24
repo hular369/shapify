@@ -17,7 +17,6 @@ $spn = [[37.255822, -7.513660], [36.347084, -6.101301], [36.994406, -2.065988], 
 $mrtn = [[21.298245840490015, -16.787743941576906],[16.607152843435603, -16.26238727877592], [15.93473760162126, -5.638508097689386], [25.053687402228004, -6.630848460757908], [25.053687402228004, -5.054778472354962], [27.15029972659487, -8.615529186894953], [25.94933468542933, -8.6739021494284], [25.88082193119576, -11.969078332618059], [23.508242031769615, -11.931228147686525], [21.372527735797636, -13.004740115743632]];
 $imgnr = [[21.298245840490015, -16.787743941576906],[16.607152843435603, -16.26238727877592]];
 
-$shape = new ShapeFactory();
 $drawShape = ShapeFactory::create('polygon', $imgnr);
 $isInside  = $drawShape->contains(27.701853, 85.319418); 
 $sides = $drawShape->sides(); 
@@ -33,8 +32,7 @@ echo PHP_EOL;
 echo $area;
 echo PHP_EOL;
 
-$shape = new ShapeFactory();
-$drawShape = $shape::create('circle', null, 27.710258, 85.279664, 10); // 10 km radius
+$drawShape = ShapeFactory::create('circle', null, 27.710258, 85.279664, 10); // 10 km radius
 $isInside  = $drawShape->contains(27.710258, 85.279664); 
 $sides = $drawShape->sides(); 
 $nearestVertex = $drawShape->nearestVertex(27.710258, 85.279664); 
@@ -48,3 +46,15 @@ echo json_encode($nearestVertex);
 echo PHP_EOL;
 echo $area;
 echo PHP_EOL;
+
+$drawCountry = ShapeFactory::create('nepal');
+$isInsideCountry  = $drawCountry->contains(28.663220, 80.506153); 
+$area = $drawCountry->area(); // in sq. km
+$nearestVertex = $drawCountry->nearestVertex(28.652713, 80.426649);
+echo $area;
+echo PHP_EOL;
+echo $isInsideCountry;
+echo PHP_EOL;
+echo json_encode($nearestVertex);
+echo PHP_EOL;
+
