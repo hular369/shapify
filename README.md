@@ -1,11 +1,11 @@
-## A PHP library that allows to check if a coordinate(lat,long) is inside or outside of a circle or a polygon
+## A PHP library that allows to check if a coordinate(lat,long) is inside or outside of a circle or a country or a polygon or a circle.
 
 
-This package enables you to check if a coordinate is inside a defined boundary of a polygon. It also provides a feature to calculate the area of a given boundary defined by polygon coordinates (latitude, longitude).
+This package enables you to check if a coordinate is inside a defined boundary of a coutry or a polygon. It also provides a feature to calculate the area of a given boundary defined by a country or a polygon coordinates (latitude, longitude), and also for circles.
 
 ## Features
 
-- **Polygon Boundaries**: 
+- **Country Boundaries**: 
   - Check if a coordinate is inside a country.
   - Determine which boundary coordinate is nearest to a given point(lat, long),
   - Calculate the area of a country.
